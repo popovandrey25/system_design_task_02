@@ -5,7 +5,10 @@ class Route:
     """
     Доменная модель маршрута.
     """
-    def __init__(self, route_id: int, start_point: str, end_point: str, waypoints: Optional[List[str]]):
+
+    def __init__(
+        self, route_id: int, start_point: str, end_point: str, waypoints: Optional[List[str]]
+    ):
         self.route_id = route_id
         self.start_point = start_point
         self.end_point = end_point
@@ -16,7 +19,7 @@ class Route:
             "route_id": self.route_id,
             "start_point": self.start_point,
             "end_point": self.end_point,
-            "waypoints": self.waypoints
+            "waypoints": self.waypoints,
         }
 
     def __repr__(self):

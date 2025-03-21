@@ -18,13 +18,10 @@ def get_next_user_id() -> int:
     fake_user_id_sequence += 1
     return fake_user_id_sequence
 
+
 # Создадим администратора при старте
 admin_user = User(
-    user_id=1,
-    login="admin",
-    password="secret",
-    first_name="Admin",
-    last_name="User"
+    user_id=1, login="admin", password="secret", first_name="Admin", last_name="User"
 )
 fake_users_db[1] = admin_user
 fake_user_id_sequence = 1

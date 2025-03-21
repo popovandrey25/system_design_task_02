@@ -11,6 +11,7 @@ fake_routes_db: Dict[int, Route] = {}
 
 fake_route_id_sequence = 0
 
+
 def get_next_route_id() -> int:
     global fake_route_id_sequence
     fake_route_id_sequence += 1

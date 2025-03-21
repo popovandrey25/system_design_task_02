@@ -5,14 +5,8 @@ class User:
     """
     Упрощенная модель пользователя.
     """
-    def __init__(
-        self,
-        user_id: int,
-        login: str,
-        password: str,
-        first_name: str,
-        last_name: str
-    ):
+
+    def __init__(self, user_id: int, login: str, password: str, first_name: str, last_name: str):
         self.user_id = user_id
         self.login = login
         self.password = password
@@ -30,5 +24,5 @@ class User:
             "user_id": self.user_id,
             "login": self.login,
             "first_name": self.first_name,
-            "last_name": self.last_name
+            "last_name": self.last_name,
         }

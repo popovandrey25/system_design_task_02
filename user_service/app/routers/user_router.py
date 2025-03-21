@@ -21,7 +21,7 @@ def create_user(payload: UserCreateRequest):
             login=payload.login,
             password=payload.password,
             first_name=payload.first_name,
-            last_name=payload.last_name
+            last_name=payload.last_name,
         )
         return user.dict()
     except ValueError as e:

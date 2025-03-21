@@ -7,6 +7,7 @@ class UserService:
     """
     Бизнес-логика работы с пользователями.
     """
+
     def __init__(self, repo: UserRepository):
         self.repo = repo
 

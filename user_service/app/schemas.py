@@ -1,9 +1,11 @@
 from pydantic import BaseModel, Field
 
+
 class UserCreateRequest(BaseModel):
     """
     Схема для создания пользователя.
     """
+
     login: str = Field(..., examples=["johndoe"])
     password: str = Field(..., examples=["secret"])
     first_name: str = Field(..., examples=["John"])
@@ -14,6 +16,7 @@ class UserResponse(BaseModel):
     """
     Схема для ответа.
     """
+
     user_id: int
     login: str
     first_name: str
@@ -27,6 +30,7 @@ class TokenRequest(BaseModel):
     """
     Схема для запроса токена (логин/пароль).
     """
+
     username: str
     password: str
 
@@ -35,5 +39,6 @@ class TokenResponse(BaseModel):
     """
     Схема для ответа при успешной аутентификации.
     """
+
     access_token: str
     token_type: str = "bearer"

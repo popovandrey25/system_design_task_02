@@ -7,6 +7,7 @@ class RouteRepository:
     """
     Репозиторий для CRUD операций по маршрутам.
     """
+
     @staticmethod
     def create_route(start: str, end: str, waypoints: list[str]) -> Route:
         new_id = get_next_route_id()

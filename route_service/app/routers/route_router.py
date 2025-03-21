@@ -17,9 +17,7 @@ def create_route(data: RouteCreateRequest):
     Создать новый маршрут
     """
     route = route_service.create_new_route(
-        start=data.start_point,
-        end=data.end_point,
-        waypoints=data.waypoints or []
+        start=data.start_point, end=data.end_point, waypoints=data.waypoints or []
     )
     return route.dict()
 

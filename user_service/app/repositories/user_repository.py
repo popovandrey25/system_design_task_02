@@ -18,7 +18,7 @@ class UserRepository:
             login=login,
             password=password,
             first_name=first_name,
-            last_name=last_name
+            last_name=last_name,
         )
         fake_users_db[new_id] = new_user
         return new_user

@@ -13,10 +13,7 @@ def create_access_token(username: str, expires_in: int = 3600) -> str:
     """
     Создаём JWT-токен, который истечёт через expires_in секунд.
     """
-    payload = {
-        "sub": username,
-        "exp": int(time.time()) + expires_in
-    }
+    payload = {"sub": username, "exp": int(time.time()) + expires_in}
     return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
 
